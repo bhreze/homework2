@@ -34,8 +34,6 @@ class Program
     {
         int[] flatArray = new int[array.Length];
         int index = 0;
-
-        // Преобразуем двумерный массив в одномерный
         for (int i = 0; i < array.GetLength(0); i++)
         {
             for (int j = 0; j < array.GetLength(1); j++)
@@ -43,11 +41,9 @@ class Program
                 flatArray[index++] = array[i, j];
             }
         }
-
-        // Сортируем одномерный массив
+        
         Array.Sort(flatArray);
 
-        // Восстанавливаем исходную структуру
         index = 0;
         for (int i = 0; i < array.GetLength(0); i++)
         {
